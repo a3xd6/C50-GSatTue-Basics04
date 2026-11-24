@@ -41,10 +41,20 @@
             #region Question 5
             // 5]--------------
 
-            int pages = 400;
-            AddBonusPages(pages);
-            Console.WriteLine(pages);
-            // pages will remain the same (400) because this is call by value for value type
+            //int pages = 400;
+            //AddBonusPages(pages);
+            //Console.WriteLine(pages);
+            //// pages will remain the same (400) because this is call by value for value type
+
+            #endregion
+
+            #region Question 6
+            // 6]----------------'
+
+            double[] prices = { 25.5, 40.0 };
+            ApplyDiscount(prices);
+            Console.WriteLine(prices[0]);
+            // prices[0] will change to 20.5 because array is reference type and will pass the address for the function
 
             #endregion
         }
@@ -68,9 +78,16 @@
         static void AddBonusPages(int pages)
         {
             pages += 50;
-        } 
+        }
         #endregion
 
+
+        #region Question 6 function
+        static void ApplyDiscount(double[] prices)
+        {
+            prices[0] -= 5;
+        }
+        #endregion
 
 
     }
