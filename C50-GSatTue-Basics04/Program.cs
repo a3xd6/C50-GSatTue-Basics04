@@ -51,10 +51,20 @@
             #region Question 6
             // 6]----------------'
 
-            double[] prices = { 25.5, 40.0 };
-            ApplyDiscount(prices);
-            Console.WriteLine(prices[0]);
-            // prices[0] will change to 20.5 because array is reference type and will pass the address for the function
+            //double[] prices = { 25.5, 40.0 };
+            //ApplyDiscount(prices);
+            //Console.WriteLine(prices[0]);
+            //// prices[0] will change to 20.5 because array is reference type and will pass the address for the function
+
+            #endregion
+
+            #region Question 7
+            // 7]-------------
+
+            int pages = 400;
+            AddBonusPagesByRef(ref pages);
+            Console.WriteLine(pages);
+            // pages will change to 450 because the passing by reference for the value type 
 
             #endregion
         }
@@ -89,6 +99,13 @@
         }
         #endregion
 
+        #region Question 7 function
+        static void AddBonusPagesByRef(ref int pages)
+        {
+            pages += 50;
+        }
+
+        #endregion
 
     }
 }
