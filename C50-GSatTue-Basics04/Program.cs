@@ -100,7 +100,14 @@ namespace C50_GSatTue_Basics04
             #region Question 11
             // 10]--------------
 
-            PrintBookInfo(pages : 150, title : "Clean Code");
+            //PrintBookInfo(pages : 150, title : "Clean Code");
+
+            #endregion
+
+            #region Question 12
+            // 12]----------------
+
+            PrintAllTitles("Clean Code", "System Architecture", "System Design");
 
             #endregion
         }
@@ -170,7 +177,18 @@ namespace C50_GSatTue_Basics04
         static void PrintBookInfo(string title, int pages = 300)
         {
             Console.WriteLine($"Title of the book: {title}, Pages: {pages}");
-        } 
+        }
+        #endregion
+
+        #region Question 12 function
+        static void PrintAllTitles(params string[] titles)
+        {
+            for (int i = 0; i < titles.Length; i++)
+            {
+                Console.WriteLine($"{i+1}.{titles[i]}");
+            }
+        }
+
         #endregion
 
     }
