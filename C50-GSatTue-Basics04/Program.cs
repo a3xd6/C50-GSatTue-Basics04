@@ -34,11 +34,19 @@
             #region Question 4
             // 4]---------------
 
-            PrintBookTitle("System Architecture");
+            //PrintBookTitle("System Architecture");
 
             #endregion
 
+            #region Question 5
+            // 5]--------------
 
+            int pages = 400;
+            AddBonusPages(pages);
+            Console.WriteLine(pages);
+            // pages will remain the same (400) because this is call by value for value type
+
+            #endregion
         }
 
         #region Question 3 function
@@ -54,6 +62,13 @@
             Console.WriteLine($"Book title: {title}" );
         }
 
+        #endregion
+
+        #region Question 5 function
+        static void AddBonusPages(int pages)
+        {
+            pages += 50;
+        } 
         #endregion
 
 
