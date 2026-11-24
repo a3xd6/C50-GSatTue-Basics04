@@ -1,4 +1,6 @@
-﻿namespace C50_GSatTue_Basics04
+﻿using static System.Runtime.InteropServices.JavaScript.JSType;
+
+namespace C50_GSatTue_Basics04
 {
     internal class Program
     {
@@ -61,10 +63,20 @@
             #region Question 7
             // 7]-------------
 
-            int pages = 400;
-            AddBonusPagesByRef(ref pages);
-            Console.WriteLine(pages);
-            // pages will change to 450 because the passing by reference for the value type 
+            //int pages = 400;
+            //AddBonusPagesByRef(ref pages);
+            //Console.WriteLine(pages);
+            //// pages will change to 450 because the passing by reference for the value type 
+
+            #endregion
+
+            #region Question 8
+            // 8]----------------
+
+            double[] prices = { 25.5, 40.0 };
+            ReplaceArray(ref prices);
+            Console.WriteLine(prices.Length);
+            //prices will change because reassignment new array in the same reference of prices because calling by reference
 
             #endregion
         }
@@ -104,7 +116,13 @@
         {
             pages += 50;
         }
+        #endregion
 
+        #region Question 8 function 
+        static void ReplaceArray(ref double[] prices)
+        {
+            prices = new double[] { 10.0, 12.5, 15.0 };
+        }
         #endregion
 
     }
