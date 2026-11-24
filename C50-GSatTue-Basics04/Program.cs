@@ -27,16 +27,33 @@
             #region Question 3
             // 3]-------------
 
-            PrintWelcomeMessage();
+            //PrintWelcomeMessage();
 
             #endregion
+
+            #region Question 4
+            // 4]---------------
+
+            PrintBookTitle("System Architecture");
+
+            #endregion
+
+
         }
 
         #region Question 3 function
         static void PrintWelcomeMessage()
         {
             Console.WriteLine("Welcome to the Library!");
-        } 
+        }
+        #endregion
+
+        #region Question 4 function
+        static void PrintBookTitle(string title)
+        {
+            Console.WriteLine($"Book title: {title}" );
+        }
+
         #endregion
 
 
