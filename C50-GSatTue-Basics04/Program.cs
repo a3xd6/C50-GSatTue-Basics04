@@ -15,14 +15,31 @@
             #region Question 2
             // 2]--------------
 
-            int[,] shelfCopies = {
-                { 3, 5 },
-                { 1, 4 } };
-            Console.WriteLine(shelfCopies[1,0]);
+            //int[,] shelfCopies = {
+            //    { 3, 5 },
+            //    { 1, 4 } };
+            //Console.WriteLine(shelfCopies[1,0]);
 
 
 
             #endregion
+
+            #region Question 3
+            // 3]-------------
+
+            PrintWelcomeMessage();
+
+            #endregion
         }
+
+        #region Question 3 function
+        static void PrintWelcomeMessage()
+        {
+            Console.WriteLine("Welcome to the Library!");
+        } 
+        #endregion
+
+
+
     }
 }
