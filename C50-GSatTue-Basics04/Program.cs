@@ -96,7 +96,6 @@ namespace C50_GSatTue_Basics04
 
             #endregion
 
-
             #region Question 11
             // 10]--------------
 
@@ -107,7 +106,7 @@ namespace C50_GSatTue_Basics04
             #region Question 12
             // 12]----------------
 
-            PrintAllTitles("Clean Code", "System Architecture", "System Design");
+            //PrintAllTitles("Clean Code", "System Architecture", "System Design");
 
             #endregion
         }
