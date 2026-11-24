@@ -73,11 +73,19 @@ namespace C50_GSatTue_Basics04
             #region Question 8
             // 8]----------------
 
-            double[] prices = { 25.5, 40.0 };
-            ReplaceArray(ref prices);
-            Console.WriteLine(prices.Length);
-            //prices will change because reassignment new array in the same reference of prices because calling by reference
+            //double[] prices = { 25.5, 40.0 };
+            //ReplaceArray(ref prices);
+            //Console.WriteLine(prices.Length);
+            ////prices will change because reassignment new array in the same reference of prices because calling by reference
 
+            #endregion
+
+            #region Question 9
+            // 9]------------------
+
+            TryGetPrice("Clean Code", out double price);
+            Console.WriteLine(price);
+            
             #endregion
         }
 
@@ -123,6 +131,22 @@ namespace C50_GSatTue_Basics04
         {
             prices = new double[] { 10.0, 12.5, 15.0 };
         }
+        #endregion
+
+        #region Question 9 function
+        static bool TryGetPrice(string title, out double price)
+        {
+            if (title == "Clean Code")
+            {
+                price = 25.5;
+                return true;
+            }
+            else
+            {
+                price = 0;
+                return false;
+            }
+        } 
         #endregion
 
     }
