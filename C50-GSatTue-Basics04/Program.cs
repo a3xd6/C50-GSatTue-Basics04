@@ -83,9 +83,17 @@ namespace C50_GSatTue_Basics04
             #region Question 9
             // 9]------------------
 
-            TryGetPrice("Clean Code", out double price);
-            Console.WriteLine(price);
-            
+            //TryGetPrice("Clean Code", out double price);
+            //Console.WriteLine(price);
+
+            #endregion
+
+            #region Question 10
+            // 10]--------------
+
+            PrintBookInfo("Clean Code");
+            PrintBookInfo("Clean Code",500);
+
             #endregion
         }
 
@@ -146,6 +154,14 @@ namespace C50_GSatTue_Basics04
                 price = 0;
                 return false;
             }
+        }
+        #endregion
+
+
+        #region Question 10 function
+        static void PrintBookInfo(string title, int pages = 300)
+        {
+            Console.WriteLine($"Title of the book: {title}, Pages: {pages}");
         } 
         #endregion
 
